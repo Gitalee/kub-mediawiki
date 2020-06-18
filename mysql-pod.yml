@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: mysql-pod
+   label:
+     name: mysql-pod
+     app: myapp
+spec: 
+   containers: 
+       - name: mysql
+         image: mysql
+         env:
+            - name: MYSQL_DATABASE
+              value: my_wiki
+            - name: MYSQL_USER
+              value: wikiuser
+            - name: MYSQL_PASSWORD
+              value: example
+              

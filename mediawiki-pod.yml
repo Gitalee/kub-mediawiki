@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: mediawiki-pod
+   
+   labels:
+     app: myapp
+spec:
+  containers:
+    -   name: mediawiki-pod 
+        image: mediawiki
+        ports: 
+            - containerPort: 80
+            
